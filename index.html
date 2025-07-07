@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CJ's Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      text-align: center;
+      background-color: #eaf4fc; /* light blue background */
+      color: #2a5d9f; /* medium blue text */
       margin: 40px;
-      background-color: #eaf4fc; /* light blue */
-      color: #2a5d9f; /* medium blue */
+      text-align: center;
     }
     h1 {
       font-size: 3em;
@@ -17,18 +20,103 @@
     h2 {
       font-weight: normal;
       font-size: 1.5em;
-      color: #3b6bbf; /* medium light blue */
+      color: #3b6bbf;
       margin-top: 0;
+      margin-bottom: 1.5em;
+    }
+    img.professional-pic {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(42, 93, 159, 0.3);
+      margin-bottom: 1em;
+    }
+    section {
+      max-width: 700px;
+      margin: 0 auto 3em auto;
+      color: #2a5d9f;
+    }
+    h3 {
+      color: #1e3a72;
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.1em;
+      color: #2a5d9f;
       margin-bottom: 2em;
+    }
+    ul li {
+      margin: 0.3em 0;
     }
     iframe {
       border: none;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(42, 93, 159, 0.3); /* blue shadow */
+      box-shadow: 0 4px 10px rgba(42, 93, 159, 0.3);
+      max-width: 100%;
+      height: 460px;
+    }
+    pre {
+      background:#f0f7ff; 
+      padding: 15px; 
+      border-radius: 8px; 
+      overflow-x:auto; 
+      font-family: Consolas, monospace; 
+      font-size: 1em; 
+      box-shadow: inset 0 0 5px #cde0f7;
+      text-align: left;
+      max-width: 700px;
+      margin: 0 auto 2em auto;
     }
   </style>
 </head>
 <body>
+  <h1>CJ's Portfolio</h1>
+  <img src="your-professional-photo.jpg" alt="CJ Professional Photo" class="professional-pic" />
+  <h2>Turning Ideas Into Code</h2>
+
+  <section id="interests">
+    <h3>Interests</h3>
+    <ul>
+      <li>Game Design</li>
+      <li>Gaming</li>
+      <li>Water Polo</li>
+      <li>Creating Stories</li>
+    </ul>
+  </section>
+
+  <section id="project1">
+    <h3>Project 1: CMU Academy Global Scholars Graphic</h3>
+
+    <iframe width="410" height="460" 
+            src="https://academy.cs.cmu.edu/sharing/maroonBird441906/embed" 
+            title="CMU Academy Global Scholars Graphic">
+    </iframe>
+
+    <p><strong>Description:</strong> This project is a graphic showing 4 of the Global Scholar programs — Clean Energy, Clean Water, Aquatic Life, and Climate Action. It serves as a visual representation of these important topics.</p>
+
+    <p><strong>Concepts Learned:</strong> Through this project, I learned the basics of coding with shapes, practicing how to create and layer graphical elements using simple drawing commands.</p>
+
+    <h4>Meaningful Code Snippet:</h4>
+    <pre>
+Oval(92,392,60,12,fill='blue')
+Oval(92,392,60,12,fill=gradient(rgb(250,250,250),rgb(230,230,230)),opacity=60)
+Polygon(55,324,129,324,122,394,62,394,fill=gradient('dodgerBlue','Blue',start='top'))
+Oval(92,324,74,20,fill='dodgerBlue')
+Polygon(52,294,132,294,122,394,62,394,fill=gradient(rgb(250,250,250),rgb(230,230,230)),opacity=60)
+Oval(91.75,289,80,23,fill=gradient(rgb(250,250,250),rgb(230,230,230)),opacity=60)
+Oval(91.75,294,80,23,fill=rgb(177,219,238))
+Circle(92,364,13,fill='black')
+RegularPolygon(92,354,15,3,fill='black')
+Circle(92,364,10,fill='white')
+RegularPolygon(92,354,10,3,fill='white')
+    </pre>
+  </section>
+</body>
+</html>
+
   <h1>CJ's Portfolio</h1>
   <h2>Turning Ideas Into Code</h2>
   <iframe width="410" height="460" src="https://academy.cs.cmu.edu/sharing/maroonBird441906/embed"></iframe>
