@@ -118,16 +118,29 @@
    src="https://academy.cs.cmu.edu/sharing/redSpider672681/embed"> 
          </iframe> 
 
-    <p class="project-text"><strong>Description:</strong> This project is a slideshow that walks through the details of goal 2 of the Global Scholars program. It walks through.</p>
+    <p class="project-text"><strong>Description:</strong> This project is a slideshow that walks through the details of goal 2 of the Global Scholars program, being the zero hunger mission. It walks through the background information for the goal, the targets of the goal, and things that people can do to help.</p>
 
-    <p class="project-text"><strong>Concepts Learned:</strong> Concepts learned for project 2 go here.</p>
+    <p class="project-text"><strong>Concepts Learned:</strong> Through this project, I learned how to effectively use functions, such as mouse events. I also learned how to manipulate shape properties and use variables.</p>
 
     <h4>Meaningful Code Snippet:</h4>
     <pre>
-    // Add project 2 code snippet here
+    #this is CJ's logo
+def cjLogo(cjX,cjY,cjColor1,cjColor2):
+    Oval(cjX,cjY,70,45,fill=cjColor1)
+    Oval(cjX,cjY-5,55,30,fill=cjColor2)
+    Line(cjX-25,cjY-20,cjX-25,cjY-45,fill=cjColor2,lineWidth=4, rotateAngle=-15)
+    Line(cjX,cjY-25,cjX,cjY-50,fill=cjColor2,lineWidth=4)
+    Line(cjX+25,cjY-20,cjX+25,cjY-45,fill=cjColor2,lineWidth=4, rotateAngle=+15)
+#this is Anish's logo
+def akLogo(akX,akY,akColor1,akColor2):
+    Circle(akX,akY,35,fill=akColor1)
+    Rect(akX-40,akY-35,75,30,fill=akColor2)
+    Line(akX,akY,akX,akY-40,fill=akColor1)
+    Line(akX-15,akY,akX-15,akY-40,fill=akColor1)
+    Line(akX+15,akY,akX+15,akY-40,fill=akColor1)
     </pre>
 
-    <p class="project-text">Explanation of the code snippet goes here.</p>
+    <p class="project-text">These two functions are the graphics found on each slide of the presentation. This makes it so the two shapes' locations and colors can be manipulated easily.</p>
   </section>
 </body>
 </html>
