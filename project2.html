@@ -118,13 +118,14 @@
    src="https://academy.cs.cmu.edu/sharing/redSpider672681/embed"> 
          </iframe> 
 
-    <p class="project-text"><strong>Description:</strong>This project is a slideshow that walks through the details of goal 2 of the Global Scholars program, being the zero hunger mission. It walks through the background information for the goal, the targets of the goal, and things that people can do to help.</p>
+    <p class="project-text"><strong>Description:</strong>This project is a group slideshow that walks through the details of goal 2 of the Global Scholars program, being the zero hunger mission. It walks through the background information for the goal, the targets of the goal, and things that people can do to help.</p>
 
     <p class="project-text"><strong>Concepts Learned:</strong>Through this project, I learned how to use functions, such as mouse events, effectively. I also learned how to manipulate shape properties and use variables.</p>
 
-    <h4>Meaningful Code Snippet:</h4>
+    <h4>Two Meaningful Code Snippets:</h4>
     <pre>
-    #this is CJ's logo
+##Here Are the Functions for the Logos##
+#this is CJ's logo
 def cjLogo(cjX,cjY,cjColor1,cjColor2):
     Oval(cjX,cjY,70,45,fill=cjColor1)
     Oval(cjX,cjY-5,55,30,fill=cjColor2)
@@ -138,9 +139,14 @@ def akLogo(akX,akY,akColor1,akColor2):
     Line(akX,akY,akX,akY-40,fill=akColor1)
     Line(akX-15,akY,akX-15,akY-40,fill=akColor1)
     Line(akX+15,akY,akX+15,akY-40,fill=akColor1)
+      
+    ##The Following is how we Called Them##
+      
+    cjLogo(300,330,'orange','red')
+    akLogo(90,320,'wheat',rgb(171,151,87))
     </pre>
 
-    <p class="project-text">These two functions are the graphics found on each slide of the presentation. This makes it so the two shapes' locations and colors can be manipulated easily.</p>
+    <p class="project-text">These two functions are the graphics found on each slide of the presentation. Using these functions allows for easy manipulation of their locations and colors, rather than having to re-code them each time. The two lines of code at the bottom of the snippet provide an example of how each logo's location was changed (these lines determined where they appeared on slide 2).</p>
   </section>
 </body>
 </html>
