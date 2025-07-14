@@ -111,23 +111,45 @@
   </div>
 
   <section id="project3">
-    <h3>Project 3: [Title Here]</h3>
+    <h3>Project 3: [Project 3: Tree Planting Game]</h3>
 
-    <iframe width="410" height="460"
-            src="https://academy.cs.cmu.edu/sharing/maroonBird441906/embed"
-            title="Project 3 Graphic">
+     <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/aquamarineMonkey528909/embed"> 
+            title="Project 3: Tree Planting Game">
     </iframe>
 
-    <p class="project-text"><strong>Description:</strong> Description for Project 3 goes here.</p>
+    <p class="project-text"><strong>Description:</strong> In this project, we were tasked with creating a game that related to one of the Global Scholar goals, which my partner and I chose global action, our game entails raising money to buy seeds, then planting those seeds so they become trees that clean the air. Once 5 trees are planted, you win!</p>
 
-    <p class="project-text"><strong>Concepts Learned:</strong> Concepts learned for Project 3 go here.</p>
+    <p class="project-text"><strong>Concepts Learned:</strong> The important concepts that we learned throughout this project were related to functions. We learned how to use "if" statements in our code, as well as create our own custom functions. The goal of this project was for my partner and me to create our own custom functions with if statements and then call them multiple times.</p>
 
     <h4>Meaningful Code Snippet:</h4>
     <pre>
-    // Add Project 3 code snippet here
+#here is the custom function for the seed#
+def movingSeed(mouseX,visibility,press):
+    if(press==1):
+        seedImage.toFront()
+    seedImage.visible=visibility
+    seedImage.centerY=200
+    seedImage.centerX=mouseX
+      
+#here is one way it gets used#
+def onMouseMove(mouseX,mouseY):
+    if(secretCounter.value==1):
+        if(mouseX<275):
+            if(mouseY<200):
+                if(seedCount2.value==0):
+                    movingSeed(mouseX,False,0)
+                else:
+                    movingSeed(mouseX,True,0)
+              
+  #here is the other way#
+  def onMousePress(mouseX,mouseY):
+      if(secretCounter.value==1):
+          if(mouseX<200):
+              movingSeed(mouseX,False,1)
     </pre>
 
-    <p class="project-text">Explanation of the code snippet goes here.</p>
+    <p class="project-text">The first function uses "seedImage", which is the seed that shows up in the game, and uses the visibility parameter to determine its visibility, centerX and centerY to determine location, and the press parameter to tell the function whether or not it is under "onMousePress". The next function, in which "movingSeed" is called, is used to determine when it appears. If you have seeds, they will appear in the top left; otherwise, they will not be visible. This is because the visibility parameter is set to false when the seed count=0. The final funtion is used to determine the seed's behaviour when the screen is clicked. Because the press value is equal to 1, the seed will know it is being called to "onMousePress", so it will behave accordingly. This means that the seed will disappear on press, and will be called to the front, so that it will appear in front of the trees.</p>
   </section>
 </body>
 </html>
