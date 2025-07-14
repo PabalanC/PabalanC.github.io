@@ -111,7 +111,7 @@
   </div>
 
   <section id="project3">
-    <h3>Project 3: [Project 3: Tree Planting Game]</h3>
+    <h3>Project 3: Project 3: Tree Planting Game</h3>
 
      <iframe width="410" height="460"
    src="https://academy.cs.cmu.edu/sharing/aquamarineMonkey528909/embed"> 
@@ -142,11 +142,11 @@ def onMouseMove(mouseX,mouseY):
                 else:
                     movingSeed(mouseX,True,0)
               
-  #here is the other way#
-  def onMousePress(mouseX,mouseY):
-      if(secretCounter.value==1):
-          if(mouseX<200):
-              movingSeed(mouseX,False,1)
+#here is the other way#
+def onMousePress(mouseX,mouseY):
+    if(secretCounter.value==1):
+        if(mouseX<200):
+            movingSeed(mouseX,False,1)
     </pre>
 
     <p class="project-text">The first function uses "seedImage", which is the seed that shows up in the game, and uses the visibility parameter to determine its visibility, centerX and centerY to determine location, and the press parameter to tell the function whether or not it is under "onMousePress". The next function, in which "movingSeed" is called, is used to determine when it appears. If you have seeds, they will appear in the top left; otherwise, they will not be visible. This is because the visibility parameter is set to false when the seed count=0. The final funtion is used to determine the seed's behaviour when the screen is clicked. Because the press value is equal to 1, the seed will know it is being called to "onMousePress", so it will behave accordingly. This means that the seed will disappear on press, and will be called to the front, so that it will appear in front of the trees.</p>
