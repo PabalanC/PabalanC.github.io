@@ -111,23 +111,41 @@
   </div>
 
   <section id="project4">
-    <h3>Project 4: [Title Here]</h3>
+    <h3>Project 4: Environmental Consciousness Quiz</h3>
 
-    <iframe width="410" height="460"
-            src="https://academy.cs.cmu.edu/sharing/maroonBird441906/embed"
-            title="Project 4 Graphic">
-    </iframe>
+<iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/blueFox172906/embed"> 
+</iframe>
 
-    <p class="project-text"><strong>Description:</strong> Description for Project 4 goes here.</p>
+    <p class="project-text"><strong>Description:</strong>In this project, we were tasked with using key functions, contains, hits, as well as previously used if statements and object properties. This quiz will give you a score based on your choices, in which a lower score is desired. Each question has one good answer, which earns no points, two okay answers, which earn one point, and one bad answer, which earns two points. Once you answer all six questions using the number keys (1, 2, 3, and 4), you can reveal your score at the end, 0 being the best and 12 being the worst.</p>
 
-    <p class="project-text"><strong>Concepts Learned:</strong> Concepts learned for Project 4 go here.</p>
-
+    <p class="project-text"><strong>Concepts Learned:</strong>The important concepts that we learned were how to use contains, hits, and key functions. The key functions were used in advancing the questions (pressing '1', '2', '3', or '4'), and are important because they allow for more versatility in program creation when working alongside mouse functions. The 'hits' and 'contains' attributes were used in the start button and final score. These are important since they easily allow for button UI to appear more flashy and intuitive, by having them change color when hovering over them, or when pressing them specifically. These were used in the start button, and the circle at the end to reveal your score</p>
     <h4>Meaningful Code Snippet:</h4>
     <pre>
-    // Add Project 4 code snippet here
+    def onKeyPress(key):
+    if(questionValue.value==1):
+        if(key=='1'):
+            questionValue.value+=1
+            question1.visible=False
+            question2.visible=True
+            pollutionCounter.value+=1
+        if(key=='2'):
+            questionValue.value+=1
+            question2.visible=True
+            question1.visible=False
+        if(key=='3'):
+            questionValue.value+=1
+            question1.visible=False
+            question2.visible=True
+            pollutionCounter.value+=2
+        if(key=='4'):
+            questionValue.value+=1
+            question1.visible=False
+            question2.visible=True
+            pollutionCounter.value+=1
     </pre>
 
-    <p class="project-text">Explanation of the code snippet goes here.</p>
+    <p class="project-text">This function is what emulates the choosing of questions (this specifically being for question 1). First, it check what question the sim is on. Then, once you press one of the keys, it will increase the pollution score (which is only made visible at the end) with depending on whether or not the answer was correct or incorrect. The "questionValue" label increases with each mouse press as well, which allows the person taking the quiz to know what question they are on. This is repeated for each question.</p>
   </section>
 </body>
 </html>
