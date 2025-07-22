@@ -111,23 +111,49 @@
   </div>
 
   <section id="project5">
-    <h3>Project 5: [Title Here]</h3>
+    <h3>Project 5: Food Delivery Game</h3>
 
-    <iframe width="410" height="460"
-            src="https://academy.cs.cmu.edu/sharing/maroonBird441906/embed"
-            title="Project 5 Graphic">
-    </iframe>
+     <iframe width="410" height="460"
+   src="https://academy.cs.cmu.edu/sharing/peruFish904153/embed"> 
+ </iframe> 
 
     <p class="project-text"><strong>Description:</strong> Description for Project 5 goes here.</p>
 
-    <p class="project-text"><strong>Concepts Learned:</strong> Concepts learned for Project 5 go here.</p>
+    <p class="project-text"><strong>Concepts Learned:</strong> This project taught us how to effectively use custom functions alongside 'key' functions.</p>
 
     <h4>Meaningful Code Snippet:</h4>
     <pre>
-    // Add Project 5 code snippet here
+    #here is one of our custom functions#
+    def dropOff (carrying):
+    if(carrying==False):
+        dropOffRect.fill='red'
+        dropLabel1.value='Go pick up'
+        dropLabel2.value='a package'
+        dropLabel1.toBack()
+        dropLabel2.toBack()
+        dropOffRect.toBack()
+        grid.toBack()
+    if(carrying==True):
+        dropOffRect.fill=rgb(72,225,113)
+        dropLabel1.value='Drop off'
+        dropLabel2.value='the package!'
+        dropLabel1.toBack()
+        dropLabel2.toBack()
+        dropOffRect.toBack()
+        grid.toBack()
+
+    #here is an instance of it being false#
+    if(packageGroup1.visible==True):
+        if(packageGroup1.hits(truck.centerX,truck.centerY)==True):
+            packageGroup1.visible=False
+            dropOff(True)
+
+    #here is an instance of it being true#
+    if(dropOffRect.contains(truck.centerX,truck.centerY)==True):
+        dropOff(False)
     </pre>
 
-    <p class="project-text">Explanation of the code snippet goes here.</p>
+    <p class="project-text">This code determines whether or not a package can be dropped off. If a package is picked up, because 'dropOff' is then marked as "True", the collection zone will turn green and will allow for the package to be dropped off. After it is dropped off, it is marked as "False", which reverts it back to its red state in which a package cannot be dropped off. This allows for the game's core objective to function, as if you couldn't drop it off or could drop it off without a package, the game would break.</p>
   </section>
 </body>
 </html>
