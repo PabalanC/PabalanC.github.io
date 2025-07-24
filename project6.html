@@ -119,7 +119,7 @@
 
     <p class="project-text"><strong>Description:</strong>For this project, me and a partner were each tasked with creating a game that related to a global scholar's goal. For our global goal, we chose affordable and clean energy. On the intro page, you can click the bottom left button to create 1 of 3 statistics in the middle. They are each randomly selected when the button is pressed. Moving onto the games, my game (game 1) is about collecting collar energy. The "sun spot" will randomly move around the screen every 2 seconds, and you must use your mouse to bring the energy collector (circle) over the sun spot. Once the energy collector is over the sun spot, it will increase the energy counter. Once that reaches 500, you win! However, be careful not to take too long, as the sun spot shrinks with each jump in location, and if it gets too small, you'll lose.</p>
 
-    <p class="project-text"><strong>Concepts Learned:</strong> Concepts learned for Project 6 go here.</p>
+    <p class="project-text"><strong>Concepts Learned:</strong>The two most important concepts we learned for this project were randomization and the "onStep" function. Randomization was used on the title screen to display the facts at random. I also used randomization to make the sun spots' appearance different every 2 seconds. The use of randomization can spice up games and other media by creating a uniquely interactive experience that is different each time it is replayed. The "onStep" functions were also used in our project. "onStep" passively triggers 30 times a second (by default), making it alike the mouse and key functions, except that "onStep" does not need an input to trigger. I used this in my game to determine when the sun spot would move. I tied a custom app method to the function, which allowed the app method's value to increase passively. Using these two together, I made it so that each time the app method's value reached 60 (2 seconds), the sun would move, before resetting it back to zero so that it could repeatedly move.</p>
 
     <h4>Meaningful Code Snippet:</h4>
     <pre>
@@ -145,13 +145,14 @@
       if(game1Screen.visible==True):
           if(sun1.contains(powerCollecter.centerX,powerCollecter.centerY)):
               solarPower.value+=1
+      #important part#
           if(solarPower.value==500):
               winScreen(1,True)
           if(sun1.radius<17):
               winScreen(1,False)
     </pre>
 
-    <p class="project-text">This code determines whether or not the player wins a game. The code shown depicts game 1, as that is the game that I worked on. The function itself first checks whether or not it is being called for game 1 or 2. It then checks whether or not the player has won. If win=True, meaning the player won, it creates the message that appears in game 1 when the player wins. If win=False, then it creates the image that appears on loss. The code beneath the initial function shows where it is called (lines 20-23). Lines 20 and 21 measure the energy collected by the player. It ensures that once the value reaches 500, the "winScreen" function is executed for victory. On the contrary, lines 22 and 23 call the function to display the loss screen when the sun spot becomes too small. These lines of code are important as, without them, there would be no way to determine whether or not the player has won or lost. On top of that, it also stops the game. This makes it so the player can't lose if they already won, and vice versa.</p>
+    <p class="project-text">This code determines whether or not the player wins a game. The code shown depicts game 1, as that is the game that I worked on. The function itself first checks whether or not it is being called for game 1 or 2. It then checks whether or not the player has won. If win=True, meaning the player won, it creates the message that appears in game 1 when the player wins. If win=False, then it creates the image that appears on loss. The code beneath the initial function shows where it is called (bottom lines). These first two of the important lines measure the energy collected by the player. It ensures that once the value reaches 500, the "winScreen" function is executed for victory. On the contrary, the other 2 lines of code call the function to display the loss screen when the sun spot becomes too small. These lines of code are important as, without them, there would be no way to determine whether or not the player has won or lost. On top of that, it also stops the game. This makes it so the player can't lose if they already won, and vice versa.</p>
   </section>
 </body>
 </html>
